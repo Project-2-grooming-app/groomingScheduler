@@ -1,0 +1,41 @@
+A.Database setup
+    1. Plan/Draw our db schema => tables do we need
+        - what table do we need (https://ondras.zarovi.cz/sql/demo/)
+        -  how will the data realate to each other
+    2. Create our db 
+        - schema file
+        - create db in MySQL workbench
+    3. Build the models for each tables   
+        - add datatype to column
+        - add the foreign keys
+    4. Seed our database
+        - create seed files
+
+B. Create package.json
+    1.Add dependencies
+        -express
+        -sequelize
+        -mysql2
+        -dotenv
+
+C. Create files
+    - gitignore
+    - server.js
+    - /config
+        - connection
+    - .env
+    -Build the models for each table in code
+        -add datatype to column
+        - add the foreign keys
+    -Seed our database
+        -create seed files
+
+D. Establish routes
+    - create /route-tests
+        - create /routes
+
+Database: groomer_db
+Tables: 
+ - user
+ - schedule
+ - reservation
