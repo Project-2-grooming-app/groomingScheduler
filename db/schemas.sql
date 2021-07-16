@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS grooming_db;
+CREATE DATABASE grooming_db;
