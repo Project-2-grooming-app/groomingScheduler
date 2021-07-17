@@ -1,6 +1,15 @@
 const router = require('express').Router();
 const { User, Reservation, Schedule } = require('../models');
 
+router.get("/", async (req, res) => {
+    try {
+        res.render('homepage')
+    } catch (err) {
+        console.log(err)
+        res.status(500).json(err)
+    }
+})
+
 // GET all reservations for homepage
 router.get('/login', async (req, res) => {
     try {
