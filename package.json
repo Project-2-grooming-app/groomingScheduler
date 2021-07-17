@@ -15,5 +15,14 @@
     "express": "^4.17.1",
     "mysql2": "^2.2.5",
     "sequelize": "^6.6.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nnadeem75/groomingScheduler.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/nnadeem75/groomingScheduler/issues"
+  },
+  "homepage": "https://github.com/nnadeem75/groomingScheduler#readme"
 }
