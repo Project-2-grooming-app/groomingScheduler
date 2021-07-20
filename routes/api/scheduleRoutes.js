@@ -6,7 +6,7 @@ router.post('/', async (req, res) => {
         const scheduleData = await Schedule.create({
             date_time: req.body.date_time,
             available: true,
-            user_id: 1
+            user_id: req.session.userid
         })
         res.status(200).json(scheduleData)
     } catch (err) {

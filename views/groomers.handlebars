@@ -1,5 +1,14 @@
-<H1>Create New Appointment Time</H1>
-<input type="text" id='datetime-input'>
-<button type="button" id='apt-btn'>Submit</button>
+<div>
+    <H1>Create New Appointment Time</H1>
+    <input type="text" id='datetime-input'>
+    <button type="button" id='apt-btn'>Submit</button>
+</div>
+<div>
+    <section class="flex-row justify-center">
+    {{#each reservations as |reserve|}}
+    {{> reservation-details}}
+    {{/each}}
+  </section>
+</div>
 
 <script src="/js/schedule.js"></script>

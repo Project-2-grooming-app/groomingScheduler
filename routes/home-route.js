@@ -3,7 +3,20 @@ const { User, Reservation, Schedule } = require('../models');
 
 router.get("/", async (req, res) => {
     try {
-        res.render('homepage')
+        const scheduleData = await Schedule.findAll({ 
+            where: {
+                available: true
+            },
+            include: [
+                {
+                    model: User,
+                    attributes: ['username']
+                }
+            ]
+        })
+        const schedules = scheduleData.map((sched => 
+            sched.get({ plain: true})))
+        res.render('homepage', {schedules})
     } catch (err) {
         console.log(err)
         res.status(500).json(err)

@@ -13,8 +13,9 @@ router.post('/signup', async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
-
-      res.render("signup");
+      req.session.user_id = dbUserData.id
+      req.session.username = dbUserData.username
+      res.status(200).json(dbUserData);
     });
   } catch (err) {
     console.log(err);
@@ -81,10 +82,11 @@ router.post('/login', async (req, res) => {
         .json({ message: 'Incorrect email or password. Please try again!' });
       return;
     }
-
+    
     req.session.save(() => {
       req.session.loggedIn = true;
-
+      req.session.userid = dbUserData.id
+      req.session.username = dbUserData.username
       res
         .status(200)
         .json({ user: dbUserData, message: 'You are now logged in!' });

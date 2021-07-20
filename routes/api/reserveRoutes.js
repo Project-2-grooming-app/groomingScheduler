@@ -20,4 +20,19 @@ router.post('/', async (req, res) => {
       }
 })
 
+router.put('/:id', async (req, res) => {
+    try {
+        const updateSchedule = Schedule.update({
+            available: false
+        },
+        {
+            where: {
+                id: req.params.id
+            }
+        })
+    } catch (err) {
+        console.log(err)
+        res.status(500).json(err)
+    }
+})
 module.exports = router
