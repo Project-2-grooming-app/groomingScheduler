@@ -9,7 +9,7 @@ router.post('/', async (req, res) => {
           pet_name: req.body.pet_name,
           phone_number: req.body.phone_number,
           notes: req.body.notes,
-          schedule: 1
+          schedule_id: req.body.timeSlot
         });
         
         res.render("homepage");

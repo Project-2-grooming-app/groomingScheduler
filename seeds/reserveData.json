@@ -1,0 +1,26 @@
+[
+    {
+      "first_name": "Sal",
+      "last_name": "Salberry",
+      "pet_name" : "Pepper",
+      "phone_number": "1234567890",
+      "notes": "She can be difficult",
+      "booked": false
+    },
+    {
+      "first_name": "Lernantino",
+      "last_name": "Pupperino",
+      "pet_name" : "Popper",
+      "phone_number": "1234567890",
+      "notes": "She can be loud",
+      "booked": false
+    },
+    {
+      "first_name": "Amiko",
+      "last_name": "Buble",
+      "pet_name" : "Pipper",
+      "phone_number": "1234567890",
+      "notes": "She can be bitey",
+      "booked": false
+    }
+  ]
