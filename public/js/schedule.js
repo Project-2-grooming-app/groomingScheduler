@@ -10,6 +10,7 @@ const createApt = async (event) => {
         })
         if (response.ok) {
             console.log('it worked!')
+            document.location.replace('/groomer/')
         }else {
             alert('Failed to reserve appt');
         }

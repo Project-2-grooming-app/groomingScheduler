@@ -3,6 +3,12 @@
     <input type="text" id='datetime-input'>
     <button type="button" id='apt-btn'>Submit</button>
 </div>
+    <H3>Available time slots:</H3>
+    <ul>
+        {{#each schedules as |schedule|}}
+        {{> groomer-schedule}}
+        {{/each}}
+    </ul>
 <div>
     <section class="flex-row justify-center">
     {{#each reservations as |reserve|}}
