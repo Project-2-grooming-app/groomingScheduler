@@ -14,9 +14,11 @@ const reserveFormHandler = async (event) => {
     // TODO: Add a comment describing the functionality of these expressions
     var checklist = document.querySelectorAll('.apt-check')
     var timeSlot
+    var timeName
     checklist.forEach(item => {
       if (item.checked) {
         timeSlot = item.value
+        timeName = item.name
         console.log('timeslot',timeSlot)
       }
     })
@@ -38,13 +40,26 @@ const reserveFormHandler = async (event) => {
   
       if (response.ok) {
         console.log('it worked!')
-        // document.location.replace('/');
+        changeAvailable(timeSlot)
+        alert(`Appointment Created for ${timeName}!`)
+        document.location.replace('/');
       } else {
         alert('Failed to reserve appt');
       }
     }
   };
   
+const changeAvailable = async (timeSlot) => {
+  const response = await fetch(`/api/reserve/${timeSlot}`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+  })
+  if (response.ok) {
+    console.log('it worked!')
+  } else {
+    alert('Failed to reserve appt');
+  }
+}
 document
   .querySelector('.reserve-form')
   .addEventListener('submit', reserveFormHandler);
