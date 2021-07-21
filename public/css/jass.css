@@ -108,9 +108,10 @@
   
   /* CARDS */
   .card {
+    padding: 10px;
     margin: 20px;
-    flex: 0 1 300px;
-    border: 7px double var(--dark);
+    flex: 1 1 300px;
+    border: 1px solid var(--dark);
     border-radius: 10px;
     background-color: var(--light);
     color: var(--dark);
@@ -163,4 +164,5 @@
     align-content: flex-start;
     align-items: center;
   }
+
   
