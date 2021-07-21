@@ -5,7 +5,8 @@
       "pet_name" : "Pepper",
       "phone_number": "1234567890",
       "notes": "She can be difficult",
-      "booked": false
+      "booked": false,
+      "schedule_id": 3
     },
     {
       "first_name": "Lernantino",
@@ -13,7 +14,8 @@
       "pet_name" : "Popper",
       "phone_number": "1234567890",
       "notes": "She can be loud",
-      "booked": false
+      "booked": false,
+      "schedule_id": 2
     },
     {
       "first_name": "Amiko",
@@ -21,6 +23,7 @@
       "pet_name" : "Pipper",
       "phone_number": "1234567890",
       "notes": "She can be bitey",
-      "booked": false
+      "booked": false,
+      "schedule_id": 1
     }
   ]
