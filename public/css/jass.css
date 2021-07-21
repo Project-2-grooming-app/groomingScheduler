@@ -1,5 +1,5 @@
 :root {
-    --primary: #3d5852;
+    --primary: #95b8e4;
     --secondary: #86938f;
     --tertiary: #5e877f;
     --quatrinary: #6c6b67;
@@ -31,6 +31,7 @@
   header {
     padding: 40px;
     text-align: center;
+    background-image: url(/public/images/dogInBubbles.png);
     background: var(--primary);
     color: var(--light);
   }
