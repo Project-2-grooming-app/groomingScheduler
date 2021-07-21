@@ -1,0 +1,17 @@
+[
+    {
+      "date_time": "7/22/2021 12:00pm",
+      "available": true,
+      "user_id" : 3
+    },
+    {
+      "date_time": "7/22/2021 1:00pm",
+      "available": true,
+      "user_id" : 2
+    },
+    {
+      "date_time": "7/22/2021 1:00pm",
+      "available": true,
+      "user_id" : 1
+    }
+  ]

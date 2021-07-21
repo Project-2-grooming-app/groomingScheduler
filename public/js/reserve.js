@@ -12,8 +12,14 @@ const reserveFormHandler = async (event) => {
     event.preventDefault();
   
     // TODO: Add a comment describing the functionality of these expressions
-    var checklist = document.querySelectorAll('.apt-check').values()
-    console.log(checklist)
+    var checklist = document.querySelectorAll('.apt-check')
+    var timeSlot
+    checklist.forEach(item => {
+      if (item.checked) {
+        timeSlot = item.value
+        console.log('timeslot',timeSlot)
+      }
+    })
     const first_name = document.querySelector('#first-name').value.trim();
     const last_name = document.querySelector('#last-name').value.trim();
     const pet_name = document.querySelector('#pet-name').value.trim()
@@ -22,17 +28,17 @@ const reserveFormHandler = async (event) => {
 
 
 
-    if (first_name && last_name && pet_name && phone_number) {
+    if (timeSlot && first_name && last_name && pet_name && phone_number) {
       // TODO: Add a comment describing the functionality of this expression
       const response = await fetch('/api/reserve/', {
         method: 'POST',
-        body: JSON.stringify({ first_name, last_name, pet_name, phone_number, notes }),
+        body: JSON.stringify({ first_name, last_name, pet_name, phone_number, notes, timeSlot }),
         headers: { 'Content-Type': 'application/json' },
       });
   
       if (response.ok) {
         console.log('it worked!')
-        document.location.replace('/');
+        // document.location.replace('/');
       } else {
         alert('Failed to reserve appt');
       }
