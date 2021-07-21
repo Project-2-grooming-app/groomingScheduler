@@ -11,12 +11,19 @@ router.get('/', async (req, res) => {
                 }
             ]
         })
+        const scheduleData = await Schedule.findAll({
+            where: {
+                available: true
+            }
+        })
         
         const reservations = reserveData.map((reserve => 
             reserve.get({ plain: true}))
         )
+        const schedules = scheduleData.map((sched => 
+            sched.get({ plain: true})))
         console.log(reservations)
-        res.render('groomers', { reservations, loggedIn: req.session.loggedIn})
+        res.render('groomers', { reservations, schedules, loggedIn: req.session.loggedIn})
     } catch (err) {
         console.log(err)
         res.status(500).json(err)
