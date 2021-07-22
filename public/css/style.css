@@ -31,11 +31,11 @@
   
   header {
     font-size: xx-large;
-    color: cornsilk;
+    color: darkblue;
     padding: 60px;
-    text-align: center;
-    background-image: url("/public/img/dogInBubbles.png");
-    background: var(--secondary);
+    text-align: left;
+    background-image: url("/img/dogInBubbles.png");
+    /* background: var(--secondary); */
     /* color: var(--light); */
     margin: 0px 60px;
     border : 5px solid black;
