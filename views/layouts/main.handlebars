@@ -13,29 +13,32 @@
 
 <body>
   <header>
-    <h1>Welcome to MY Grooming Scheduler</h1>
+    <a href="/">Welcome to MY Grooming Scheduler</a>
   </header>
-  <nav>
-    <a href="/">Home</a>
-    {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    <a href="/login">Login</a>
-    {{/if}}
-  </nav>
   <main>
-    <aside>
+    {{!-- <aside>
       <h2>We Groom All Pets!</h2>
-    </aside>
+    </aside> --}}
     <div class="card" style="align-items: center;">
       {{{body}}}
     </div>
   </main>
-  {{#if loggedIn}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="/js/dateTime.js"></script>
 </body>
+<footer>
+  <div>
+<img src="/public/img/groomingCartoon.jpeg" class="img-thumbnail" alt="...">  </div>
+  <div>
+   {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <a href="/login">Staff Login</a>
+    {{/if}}
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+  </div>
+</footer>
 
 </html>
