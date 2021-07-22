@@ -1,0 +1,96 @@
+:root {
+    --primary: #95b8e4;
+    --secondary: #666a86;
+    --light: #e3e4e3;
+    --error: rgb(228, 46, 1);
+    --border-radius: 0.3rem;
+  }
+  
+  body {
+    font-family: Arial;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: flex-start;
+    background-image: url("/public/img/groomedDog.jpeg");
+    filter: drop-shadow(0 0 0.75rem black);
+    backdrop-filter: blur(3px);
+    background-color: var(--primary);
+    width: 100%;
+  }
+  
+  /* a {
+    color: var(--dark);
+    text-decoration: none;
+  } */
+  
+  a:visited {
+    color: inherit;
+  }
+  
+  header {
+    font-size: xx-large;
+    color: darkblue;
+    padding: 60px;
+    text-align: left;
+    background-image: url("/img/dogInBubbles.png");
+    /* background: var(--secondary); */
+    /* color: var(--light); */
+    margin: 0px 60px;
+    border : 5px solid black;
+    border-radius: 10px;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+  
+  /* aside {
+    flex: 0;
+    background-color: var(--primary);
+    padding: 80px;
+    border: 5px solid black;
+    border-radius: 10px;
+    text-align: left;
+    color: var(--light);
+    margin-top: 5px;
+  } */
+  
+  
+  /* img {
+    max-width: 100%;
+    height: auto;
+  } */
+    
+  /* CARDS*/
+  .card {
+    font-size: large;
+    padding: 10px;
+    margin: 20px 100px;
+    flex: 1 1 300px;
+    border: 2px solid #7e5920;
+    border-radius: 10px;
+    background-color: #dc851f;
+    color: var(--dark);
+    text-shadow: 1px 1px 2px #ffa737 } 
+  /* FOOTER */
+
+  footer {
+    justify-content: center;
+    text-align: center;
+    color: rgb(3, 3, 163);
+  }
+  
+  
+  
+  /* LAYOUT */
+  .container {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start;
+    align-items: center;
+  }
+
