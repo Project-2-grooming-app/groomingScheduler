@@ -9,12 +9,12 @@
         {{> groomer-schedule}}
         {{/each}}
     </ul>
-<div>
-    <section class="flex-row justify-center">
-    {{#each reservations as |reserve|}}
-    {{> reservation-details}}
-    {{/each}}
-  </section>
+<div class="container">
+    <div class="row">
+        {{#each reservations as |reserve|}}
+        {{> reservation-details}}
+        {{/each}}
+  </div>
 </div>
 
 <script src="/js/schedule.js"></script>
